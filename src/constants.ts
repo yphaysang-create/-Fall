@@ -15,15 +15,14 @@ export const QUESTIONS: Question[] = [
     text: "ช่วงอายุของผู้ป่วย",
     options: [
       { label: "น้อยกว่า 60 ปี", value: 0 },
-      { label: "60-70 ปี", value: 1 },
-      { label: "71-80 ปี", value: 1 },
-      { label: "81-90 ปี", value: 1 },
-      { label: "91-100 ปี", value: 1 },
-      { label: "มากกว่า 100 ปี", value: 1 }
+      { label: "60-69 ปี", value: 1 },
+      { label: "70-79 ปี", value: 1 },
+      { label: "80-89 ปี", value: 1 },
+      { label: "90-100 ปีขึ้นไป", value: 1 }
     ]
   },
   {
-    id: 6,
+    id: 5,
     text: "มีประวัติการหกล้มในช่วง 1 ปีที่ผ่านมา",
     options: [
       { label: "ใช่", value: 1 },
@@ -31,7 +30,7 @@ export const QUESTIONS: Question[] = [
     ]
   },
   {
-    id: 7,
+    id: 6,
     text: "มีภาวะสับสน หรือ ประเมินความสามารถของตนเองไม่ตรงความจริง",
     description: "(เช่น แขนขาอ่อนแรง แต่คิดว่าตนเองเดินไปเข้าห้องน้ำเองได้)",
     options: [
@@ -40,7 +39,7 @@ export const QUESTIONS: Question[] = [
     ]
   },
   {
-    id: 8,
+    id: 7,
     text: "มีปัญหาการมองเห็นที่ส่งผลต่อชีวิตประจำวัน",
     description: "เช่น การมองเห็นเลือนลาง ทำให้เดินชนประตูหรือสิ่งกีดขวางอื่น",
     options: [
@@ -49,7 +48,7 @@ export const QUESTIONS: Question[] = [
     ]
   },
   {
-    id: 9,
+    id: 8,
     text: "มีปัญหาการขับถ่าย",
     description: "(ปัสสาวะ/อุจจาระบ่อย/กลั้นไม่อยู่)",
     options: [
@@ -58,9 +57,16 @@ export const QUESTIONS: Question[] = [
     ]
   },
   {
+    id: 9,
+    text: "ได้รับสารน้ำทางหลอดเลือดดำ / IV lock",
+    options: [
+      { label: "ใช่", value: 1 },
+      { label: "ไม่ใช่", value: 0 }
+    ]
+  },
+  {
     id: 10,
-    text: "ได้รับสารน้ำทางหลอดเลือดดำ/ มีอุปกรณ์ทางการแพทย์ติดตัว",
-    description: "เช่น IV lock, Foley’s Catheter, Radivac drain ฯลฯ",
+    text: "มีอุปกรณ์ทางการแพทย์ติดตัว Foley’s Catheter",
     options: [
       { label: "ใช่", value: 1 },
       { label: "ไม่ใช่", value: 0 }
@@ -68,6 +74,14 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 11,
+    text: "มีอุปกรณ์ทางการแพทย์ติดตัว Radivac drain / PCNL",
+    options: [
+      { label: "ใช่", value: 1 },
+      { label: "ไม่ใช่", value: 0 }
+    ]
+  },
+  {
+    id: 12,
     text: "ผู้ป่วยสามารถลุกเดิน / ทรงตัว / เคลื่อนย้ายตัวเองได้หรือไม่",
     options: [
       { label: "ทำได้ต้องมีคนช่วย หรือ ท่าทางไม่มั่นคง", value: 1 },
@@ -75,7 +89,7 @@ export const QUESTIONS: Question[] = [
     ]
   },
   {
-    id: 12,
+    id: 13,
     text: "ผู้ป่วยสามารถเคลื่อนไหวร่างกายเพื่อทำกิจวัตรประจำวันได้หรือไม่",
     options: [
       { label: "ทำได้ต้องมีคนช่วย หรือ ใช้รถเข็น/ เครื่องช่วยพยุง", value: 1 },
@@ -83,16 +97,42 @@ export const QUESTIONS: Question[] = [
     ]
   },
   {
-    id: 13,
-    text: "มีการใช้ยาที่ทำให้เสี่ยงต่อการหกล้มหรือไม่",
-    description: "Analgesics, Antipsychotics, Anticonvulsants, Benzodiazepine, Antihypertensives, Cardiac drugs, Antiarrhythmics, Antidepressants, Diuretics",
+    id: 14,
+    text: "มีการใช้ยา Analgesics (and opiates)",
+    description: "ระงับความเจ็บปวด โดย opiates/opioids เป็นกลุ่มยาแก้ปวดที่รุนแรงที่สุด",
     options: [
       { label: "มี", value: 1 },
       { label: "ไม่มี", value: 0 }
     ]
   },
   {
-    id: 14,
+    id: 15,
+    text: "มีการใช้ยา Antipsychotics / Antidepressants / Anticonvulsants",
+    description: "กลุ่มยาทางจิตเวชที่ใช้รักษาอาการทางจิต หยุดอาการชักที่เกิดจาก โรคลมชัก",
+    options: [
+      { label: "มี", value: 1 },
+      { label: "ไม่มี", value: 0 }
+    ]
+  },
+  {
+    id: 16,
+    text: "มีการใช้ยา Benzodiazepine (and non-benzodiazepine sedative hypnotic drugs)",
+    description: "กลุ่มยาระงับประสาทและยานอนหลับ (Sedative-hypnotics) ที่ออกฤทธิ์กดระบบประสาทส่วนกลาง",
+    options: [
+      { label: "มี", value: 1 },
+      { label: "ไม่มี", value: 0 }
+    ]
+  },
+  {
+    id: 17,
+    text: "มีการใช้ยา Antihypertensives, Cardiac drugs, Antiarrhythmics, Diuretics",
+    options: [
+      { label: "มี", value: 1 },
+      { label: "ไม่มี", value: 0 }
+    ]
+  },
+  {
+    id: 18,
     text: "ผลการตรวจทางห้องปฏิบัติการผิดปกติ",
     description: "(เช่น Hb, Hct, Electrolyte)",
     options: [
